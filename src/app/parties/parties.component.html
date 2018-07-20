@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Parties to the Deal  Page </title>
+   </head>
+   <body class="fitch">
+      <!-- <table class="hidden" >   
+         <tbody id="partiesOfIssuanceTemplate">
+             <tr class="subgrpInfo-parties nowrap">
+                 <td>                
+                     <a href="#" class="agentAlert"><i class="fa fa-bell-o fa-2x" title="Agent Alert"></i></a>
+                 </td>
+                 <td><input  type="text"  class='typeahead  party-agent-name poi-validation' style="max-width:450px;"/>
+                     <input value="" class='party-agent-id poi-validation' type="hidden"/>
+                 </td>
+                 <td><select name='party-role' class='party-role poi-validation' style="max-width:250px;"></select>
+                     <input name='party-role-hidden' class='party-role-hidden' value=""  type="hidden"/>
+                 </td>
+                 <td><input name='party-start-date' type='text' class='datepicker party-start-date' style="width:78px;"/>
+                 </td>
+                 <td><input name='party-end-date' type='text' class='datepicker party-end-date' style="width:78px;"/>
+                 </td> 
+                 <td>
+                     <input type="hidden" id="agentContactIds" name="agentContactIds" class="agentContactIds"/>
+                     <span id="agentContactNames" name="agentContactNames" class="agentContactNames" style='max-width:85px;'></span> &nbsp;
+                 </td>
+                 <td align='left'>     
+                     <a href="#" class="agentContactIcon" title=""><i class="fa fa-users fa-2x color-icon-blue"></i></a>
+                 </td> 
+                 <td>              
+                     <input name="party-publish-flag" class="party-publish-flag" type="checkbox" value="Y" style="width:18px;"/>               
+                 </td>
+                 <td>     
+                     <a href="#" class='cloneDealPartyRow' title="clone agent row"><i class="fa fa-clone fa-2x"></i></a>
+                 </td> 
+             </tr>
+         </tbody>
+         </table>   -->
+      <div id="subgrpInfo" class="subgrpInfo fitch-widget-section webform container">
+         <div class="container-fluid bordered">
+            <div id="message-div" class="hidden"></div>
+            <div id='busy'></div>
+            <form id="subgroupInfo" name="subgroupInfo" class="form-horizontal" data-publish-lockable= "true">
+               <div id="issuancePartiesDiv">
+                  <fieldset class="span11">
+                     <legend>Parties to the Deal</legend>
+                     <br/>
+                     <table class="table table-condensed row">
+                        <thead>
+                           <tr>
+                              <th class="col"></th>
+                              <th class="required nonfigurable col-sm-4" >Company Name</th>
+                              <th class="required nonfigurable col-sm-4" >Company Role</th>
+                              <th class="col">Start Date </th>
+                              <th class="col">End Date</th>
+                              <th class="col">Contacts</th>
+                              <th align='left' class="col"></th>
+                              <th class="col">Pub</th>
+                              <th class="col"></th>
+                              <th class="col"></th>
+                           </tr>
+                        </thead>
+                        <tbody id="parties" class="noBorder">
+                           <tr>
+                              <td align='right'>
+                                 <a href="#" data-toggle="modal" data-target="#editNotesModal"><i class="fa fa-bell-o fa-2x" title="Agent Alert"></i></a>
+                              </td>
+                              <td> <input  type="text" placeholder="Type Ahead..."/> </td>
+                              <td>
+                                 <select id="agentRole" name="agentRole">
+                                    <option value="" disabled selected>select a category</option>
+                                 </select>
+                              </td>
+                              <td><input type="date" placeholder="startDate"/></td>
+                              <td> <input type="date" placeholder="endDate"/> </td>
+                              <td align='right'>
+                                 <a href="javascript:void(0)"  data-toggle="modal" data-target="#editContactsModal"><i class="fa fa-users fa-2x color-icon-blue" title="Agent Contacts"></i></a></td>
+                              <td></td>
+                              <td><input type="checkbox" id="pubFlag" name="pubFlag"/></td>
+                              <td><i class="fa fa-clone fa-2x"></i></td>
+                              <td><button class="btn btn-form-element add controls" data-button-action="add" type="button"></button></td>
+                           </tr>
+                        </tbody>
+                     </table>
+                     <input type="hidden" name="partiesRowCount" id="partiesRowCount" value="0"/>
+                  </fieldset>
+               </div>
+               <div id="agentContactDialog" title="Agent Contact" class="dialog"></div>
+               <div id="agentAlertDialog" title="Counterparty Rating Trigger Setup" class="dialog"></div>
+            </form>
+         </div>
+      </div>
+      <div class="modal fade" id="editNotesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Counterparty Rating Trigger Setup
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button></h5>
+               </div>
+               <div class="modal-body">
+                <app-agentalert></app-agentalert>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="editContactsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Agent Contact
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button></h5>
+               </div>
+               <div class="modal-body">
+                  <app-contacts></app-contacts>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

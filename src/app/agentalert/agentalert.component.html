@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<form id="counterPartyFrm" class="form-horizontal" method="POST" data-publish-lockable= "true">
+  <div id="triggerTemplate" class="hidden">
+     <div class="counter Party tagging nowrap">
+        <select onChange="getTagValue(this.value, this.name);" class="code-select"></select>
+        <select class="value-select"></select>
+        <input type="hidden" class="tag-code"/>
+        <input type="hidden" class="tag-value"/>
+     </div>
+  </div>
+  <div class="container-fluid">
+     <div id='busy'></div>
+     <div class="row-fluid">
+        <div id="message-div" class ="hidden"></div>
+        <div class="control-group" style="margin-left: 5px">
+           <label class="control-label" for="agentName" style="font-size:15px">Agent Name:</label>
+           <div class="controls-wide-margin" style=" margin-left: 5px ; margin-top: 6px"><span id="agentName"></span></div>
+        </div>
+        <br/>
+        <div class="control-group">
+           <div id="CnterPartyTriggers">
+              <fieldset>
+                 <div class="container">
+                    <table class="table table-condensed row" style="margin-bottom: 0px">
+                       <thead>
+                          <tr>
+                             <th class="col-sm-2">Rating Type</th>
+                             <th class="col-sm-2" style="text-align: right">Min Counter party Trigger</th>
+                          </tr>
+                       </thead>
+                       <tbody id="counterParty" class="noBorder">
+                          <tr>
+                             <td>
+                                <select id="ratingType" name="ratingType">
+                                   <option value="" disabled selected>select a Rating Type</option>
+                                </select>
+                             </td>
+                             <td>
+                                <select  id="minCntrTrgr">
+                                   <option value="" disabled selected>select min cntrparty trigger</option>
+                                </select>
+                             </td>
+                             <td><button class="btn btn-form-element add controls" data-button-action="add" type="button"></button></td>
+                          </tr>
+                       </tbody>
+                    </table>
+                 </div>
+                 <div class="control-group">
+                    <div id="CnterPartyTrigger" ></div>
+                 </div>
+                 <input type="hidden" name="triggerRowCount" id="triggerCount" value="0"/>
+              </fieldset>
+           </div>
+           <div class="row-fluid form-horizontal">
+              <div id="divcounterpartyComments" >
+                 <fieldset class="span12">
+                    <label class="control-label" style="font-size:15px">Comments:</label> <br><br>               
+                    <div class="control-group">
+                       <textarea rows="10" id="commentParty" name="comments" style="width: 825px;"></textarea>
+                    </div>
+                    <div>
+                       <input type="hidden" name="ctgrId" value="" id="ctgrId"/>
+                       <input type="hidden" name="agentId" value=""  id="agentId"/>
+                       <input type="hidden" name="id" value="" id="id"/>
+                       <input type="hidden" name="idType" value="" id="idType"/>
+                       <input type="hidden" name="agntRoleId" value="" id="agntRoleId"/>
+                    </div>
+                 </fieldset>
+              </div>
+           </div>
+        </div>
+     </div>
+     <div class="modal-footer">
+        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-outline-primary" data-dismiss="modal" data-target="#editNotesModal">Save</button>
+     </div>
+     <div class="description" style="margin-top: 100px;margin-left: 10px"><b>Note:</b> Triggers are only active based on Start date and End date on the prior screen.</div>
+  </div>
+</form>

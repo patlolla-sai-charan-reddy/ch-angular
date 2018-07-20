@@ -1,0 +1,504 @@
+/* You can add global styles to this file, and also import other style files */
+p {
+    font-family: Lato;
+  }
+  h4{
+    font-size: 17px;
+    text-align: center;
+    line-height: 13px;
+    font-weight: bold;
+    padding: 5px 5px 5px 0px;
+    margin: 0;
+    margin-right: 20px;
+    color: #416da3;
+  }
+  .hidden {
+    display:none;
+  }
+  .required:after{ 
+    content:"*"; 
+    color: #E32000;
+    font-size:12px;
+    font-weight:bold;
+    display:inline; 
+  }
+  .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .busy,
+  #busy {
+    position:absolute;
+    z-index:999;
+    width:50px;
+    height:50px;
+    top:40%;
+    left:50%;
+    background:url('https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiAvsCPn5fcAhULPN8KHWaNBOwQjRx6BAgBEAU&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ALoading_icon.gif&psig=AOvVaw3A2_VnlDNeAYI7Sav3_WsZ&ust=1531405211539497') center no-repeat;
+    background-size:40px;    
+    display:none;
+  }
+  .form-horizontal .control-label {
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+    width:auto;
+  }
+   fieldset legend {
+    font-size: 14px;
+    line-height: 13px;
+    font-weight: bold;
+    padding: 5px 5px 5px 0px;
+    margin: 0;
+    margin-right: 20px;
+    border-bottom: 1px solid #99bce8;
+    color: #416da3;
+   }
+   fieldset {
+    border: none;
+    padding: 10px 10px 10px 15px;
+    margin:0 10px 0 0;
+  }
+  form fieldset{
+    position: relative;
+    margin-top: 10px;
+  }
+  .row-fluid .span11-no-gutter {width:91.6666666666667%;}
+  /* .fitch .table th,
+  .fitch .table td {
+    border-left: 1px solid #99bce8;
+    border-top: 1px solid #99bce8;
+  } */
+  .table-condensed th,
+  .table-condensed td {
+    border:none;
+  }
+  .left {
+    float:left;
+  }
+  .right {
+    float:right;
+  }
+  .fa { color:#336699; }
+  .color-icon-red { color:#ff0000; }
+  .color-icon-blue { color:#0088cc; }
+  .color-icon-green { color:#25b025; }
+  .color-icon-yellow { color:#f2cc22; }
+  .nowrap {
+    white-space: nowrap;
+  }
+  .btn.btn-form-element.add:before {
+    content: "\f055";
+  }
+  .btn.btn-form-element.add {
+    /*background-image: url("/CoreWeb/img/icons/add.png");*/
+    display: inline-block;
+    margin-top: -5px;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 2em;
+    color:#25b025;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  .btn.btn-form-element.remove:before {
+    content: "\f057";
+  }
+  .btn.btn-form-element.remove {
+    /*background-image: url("/CoreWeb/img/icons/remove.png");*/
+    display: inline-block;
+    margin-top: -5px;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 2em;
+    color:#ff0000;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .fitch .iframe .fitch-widget-content {
+    height: 87vh;
+  }
+  .fitch .fitch-widget-content {
+    min-height: 40vh;
+    height: 67vh;
+    /*position: relative;*/
+    overflow: hidden;
+  }
+  
+  /** Webform */
+  .iframe.fitch .fitch-widget-section.webform .fitch-widget-content{
+    height: 85vh;
+  }
+  .fitch-widget-section.webform .fitch-widget-content{
+    height: 64vh;
+  }
+  .cf-work-area.fitch-widget-section.webform .fitch-widget-content {
+    overflow-y: auto;
+  }
+  .dialog {
+    display: none;
+    overflow: hidden;
+  }
+  
+  
+  
+  iframe {
+    background-color: transparent;
+    border: 0px none transparent;
+    padding: 0px;
+    overflow: hidden;
+    width:100%;
+    min-height: 200px;
+  }
+  body.iframe {
+    min-width: 0;
+    padding: 0;
+  /*  margin-top: 35px;*/   /*displace date picker calendar, We can add it back if we find embedding problems */ 
+  }
+  .fitch .iframe .fitch-widget-content {
+    height: 87vh;
+  }
+  .iframe.fitch .fitch-widget-section.webform .fitch-widget-content{
+    height: 85vh;
+  }
+  .fitch.iframe form .footer{
+    background-color: lightblue;
+    border-top: 1px solid #00f;
+    position: relative;
+    overflow: hidden;
+    clear: both;
+  }
+  .fitch .row-fluid .span12-no-gutter {width:100%;}
+  
+  
+  
+  .fitch .form-horizontal .control-label {
+    text-align: left;
+    font-weight: bold;
+    font-size: 11px;
+    width:auto;
+  }
+  
+  
+  .fitch .form-horizontal .control-group {
+    margin: 0 0 5px 0;
+  }
+  .fitch .form-horizontal .control-group-ms {
+    margin-bottom: 5px;
+    height: 60px;
+  }
+  .fitch .form-horizontal .controls {
+    margin-left: 20%;
+  }
+  .fitch .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .fitch .row-fluid [class*="no-gutter"] { 
+    margin-left:0
+  }
+  .hidden {
+    display:none;
+  }
+  .top-buffer {
+    margin-top:10px;
+  }
+  .right {
+    float:right;
+  }
+  .fitch .fitch-widget-section.grid .fitch-widget-content .ui-jqgrid-bdiv{
+    /*height: 62vh;*/
+    max-height: 62vh;
+  }
+  .fitch .main .fitch-widget-content {
+     overflow-y: auto;
+  }
+  .bordered {
+    border: 1px solid #99bce8;
+  }
+  .fitch .form-action-btns {
+    position: absolute;
+    z-index: 5;
+  }
+  .fitch .form-action-btns .btn {
+    margin-left: 5px;
+  }
+  .fitch .form-action-btns.top {
+    top:-30px;
+  }
+  .fitch .form-action-btns.right {
+    right:0px;
+  }
+  .fitch .form-action-btns.bottom {
+    bottom:10px;
+    display: none;
+  }
+  .fitch .form-action-btns.left {
+    left:10px;
+  }
+  .fitch.iframe form .footer{
+    background-color: lightblue;
+    border-top: 1px solid #00f;
+    position: relative;
+    overflow: hidden;
+    clear: both;
+  }
+  .fitch form .footer .form-action-btns {
+    position: relative;
+    bottom: auto;
+    margin: 15px 0;
+  }
+  .fitch .dialog {
+    display: none;
+    overflow: hidden;
+  }
+  p {
+    font-family: Lato;
+  }
+  .hidden {
+    display:none;
+  }
+  .required:after{ 
+    content:"*"; 
+    color: #E32000;
+    font-size:12px;
+    font-weight:bold;
+    display:inline; 
+  }
+  .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .busy,
+  #busy {
+    position:absolute;
+    z-index:999;
+    width:50px;
+    height:50px;
+    top:40%;
+    left:50%;
+    background:url('https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiAvsCPn5fcAhULPN8KHWaNBOwQjRx6BAgBEAU&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ALoading_icon.gif&psig=AOvVaw3A2_VnlDNeAYI7Sav3_WsZ&ust=1531405211539497') center no-repeat;
+    background-size:40px;    
+    display:none;
+  }
+  .form-horizontal .control-label {
+    text-align: left;
+    font-weight: bold;
+    font-size: 11px;
+    width:auto;
+  }
+   fieldset legend {
+    font-size: 14px;
+    line-height: 13px;
+    font-weight: bold;
+    padding: 5px 5px 5px 0px;
+    margin: 0;
+    margin-right: 20px;
+    border-bottom: 1px solid #99bce8;
+    color: #416da3;
+   }
+   fieldset {
+    border: none;
+    padding: 10px 10px 10px 15px;
+    margin:0 10px 0 0;
+  }
+  form fieldset{
+    position: relative;
+    margin-top: 10px;
+  }
+  .row-fluid .span11-no-gutter {width:91.6666666666667%;}
+  .table-condensed th,
+  .table-condensed td {
+    border:none;
+  }
+  .left {
+    float:left;
+  }
+  .right {
+    float:right;
+  }
+  .fa { color:#336699; }
+  .color-icon-red { color:#ff0000; }
+  .color-icon-blue { color:#0088cc; }
+  .color-icon-green { color:#25b025; }
+  .color-icon-yellow { color:#f2cc22; }
+  .nowrap {
+    white-space: nowrap;
+  }
+  .btn.btn-form-element.add:before {
+    content: "\f055";
+  }
+  .btn.btn-form-element.add {
+    /*background-image: url("/CoreWeb/img/icons/add.png");*/
+    display: inline-block;
+    margin-top: -5px;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 2em;
+    color:#25b025;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  .btn.btn-form-element.remove:before {
+    content: "\f057";
+  }
+  .btn.btn-form-element.remove {
+    /*background-image: url("/CoreWeb/img/icons/remove.png");*/
+    display: inline-block;
+    margin-top: -5px;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 2em;
+    color:#ff0000;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .fitch .iframe .fitch-widget-content {
+    height: 87vh;
+  }
+  .fitch .fitch-widget-content {
+    min-height: 40vh;
+    height: 47vh;
+    /*position: relative;*/
+    overflow: hidden;
+  }
+  
+  /** Webform */
+  .iframe.fitch .fitch-widget-section.webform .fitch-widget-content{
+    height: 85vh;
+  }
+  .fitch-widget-section.webform .fitch-widget-content{
+    height: 64vh;
+  }
+  .cf-work-area.fitch-widget-section.webform .fitch-widget-content {
+    overflow-y: auto;
+  }
+  .dialog {
+    display: none;
+    overflow: hidden;
+  }
+  th {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .fitch .btn.btn-form-element {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0;
+    border: none;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    padding-left: 57px;
+    background-position-x: 0;
+    background-position-y: 0;
+    padding: 0;
+    margin: 0 0 5px 7px;
+    background-color: transparent;
+  }
+  .fitch .btn.btn-form-element.add:before {
+    content: "\f055";
+  }
+  .fitch .btn.btn-form-element.add {
+    /*background-image: url("/CoreWeb/img/icons/add.png");*/
+    display: inline-block;
+    margin-top: -5px;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 2em;
+    color:#25b025;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  .fitch .btn.btn-form-element.remove:before {
+    content: "\f057";
+  }
+  .fitch .btn.btn-form-element.remove {
+    /*background-image: url("/CoreWeb/img/icons/remove.png");*/
+    display: inline-block;
+    margin-top: -5px;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 2em;
+    color:#ff0000;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  .title-bar ,
+  .modal-title{
+    padding:5px;
+    text-align: left;
+    caption-side: top;
+    padding-left:10px;
+    font-weight: bold;
+    color: #2c5090;
+    line-height:10px;
+    border:1px solid #99bce8;
+    background-color:#cbddf3;
+    /*background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dae7f6), color-stop(45%, #cddef3), color-stop(46%, #abc7ec), color-stop(50%, #abc7ec), color-stop(51%, #b8cfee), color-stop(100%, #cbddf3));
+    background-image:-webkit-linear-gradient(top, #dae7f6,#cddef3 45%,#abc7ec 46%,#abc7ec 50%,#b8cfee 51%,#cbddf3);*/
+    /* background-image:-moz-linear-gradient(top, #dae7f6,#cddef3 45%,#abc7ec 46%,#abc7ec 50%,#b8cfee 51%,#cbddf3);
+    background-image:-o-linear-gradient(top, #dae7f6,#cddef3 45%,#abc7ec 46%,#abc7ec 50%,#b8cfee 51%,#cbddf3);
+    background-image:-ms-linear-gradient(top, #dae7f6,#cddef3 45%,#abc7ec 46%,#abc7ec 50%,#b8cfee 51%,#cbddf3);
+    background-image:linear-gradient(top, #dae7f6,#cddef3 45%,#abc7ec 46%,#abc7ec 50%,#b8cfee 51%,#cbddf3);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#dae7f6', EndColorStr='#abc7ec'); */
+    /*-moz-box-shadow:#f4f8fd 0 1px 0px 0 inset;
+    -webkit-box-shadow:#f4f8fd 0 1px 0px 0 inset;
+    -o-box-shadow:#f4f8fd 0 1px 0px 0 inset;
+    box-shadow:#f4f8fd 0 1px 0px 0 inset;*/
+  }
+  .title-bar1 {
+    background-color: #dfeffc;
+    padding:5px;
+    text-align: center;
+    font-size:12px;
+    caption-side: top;
+    padding-left:10px;
+    color: #2c5090;
+    line-height:10px;
+    border:1px solid #99bce8;
+  }
+  .clear {
+    clear:both;
+  }
+  .fitch .table-condensed th,
+  .fitch .table-condensed td {
+    border:none;
+  }
+  .fitch .table-bordered,
+  .input[type="text"],
+  .fitch input[type="password"],
+  .fitch input[type="datetime"],
+  .fitch input[type="datetime-local"],
+  .input[type="date"],
+  .fitch input[type="month"],
+  .fitch input[type="time"],
+  .fitch input[type="week"],
+  .fitch input[type="number"],
+  .fitch input[type="email"],
+  .fitch input[type="url"],
+  .fitch input[type="search"],
+  .fitch input[type="tel"],
+  .fitch input[type="color"],
+  .select,
+  .fitch .uneditable-input {
+    border-color: #bbb;
+    border-radius: 0;
+    height: 12px;
+    line-height: 12px;
+    margin: 0 5px 5px 0;
+    font-size: 11px;
+    background-color:#e6e6e6;
+  }
+  .fitch .row-fluid [class*="no-gutter"] { 
+    margin-left:0
+  }
+  /** Used with .row to add verticall space between them */
+  .buffer {
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  .top-buffer {
+    margin-top:10px;
+  }
+  .bottom-buffer {
+    margin-bottom:10px;
+  }

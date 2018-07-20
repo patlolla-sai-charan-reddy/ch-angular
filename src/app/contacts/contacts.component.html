@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Agent's Contacts Page </title>
+   </head>
+   <body class="fitch">
+      <form id="agent-search-form" class="form-horizontal">
+         <div class="container-fluid">
+            <div class="row-fluid">
+               <span id="message-div" class="hidden"></span>
+            </div>
+         </div>
+         <div class="row-fluid top-buffer">
+            <div class="right">
+               <input type="button" class="btn newContact" style="margin-right:20px; " name="newcontact" id="newcontactBtn" value="New Contact"/>
+            </div>
+         </div>
+         <br/><br/>
+         <div class="title-bar clear" id="contactDetails" style="font-weight:bold;">
+           <table>
+            <tr>
+                <td style="font-size: 12px">Contact List For Agent:</td>
+                <td class="controls readonly-text" id="contactList" name="contactList"></td>
+            </tr>
+           </table>
+         </div>
+         <div class="title-bar1 clear" id="records">
+           <div class="row">
+              <div class="col-sm"></div>
+              <div class="col-sm">View Records</div>
+              <div class="col-sm"></div>
+            </div>
+         </div>
+         <div id="busy"></div>
+         <div id="agent-grid" class="fitch-widget-section grid">
+            <div class="fitch-widget-content main bordered">
+               <table id="agent-list" class="table table-bordered row">
+                  <thead>
+                           <tr>
+                              <th style="width:2%"><input type="checkbox"></th>
+                              <th class="col-sm-4" style="font-size: 12px; font-weight: bold">Contact Name</th>
+                              <th class="col-sm-5" style="font-size: 12px; font-weight: bold" >Email Address</th>
+                              <th class="col" style="font-size: 12px; font-weight: bold">Active Flag </th>
+                           </tr>
+                  </thead>
+               </table>
+               <div id="agent-grid-pager" class="background-gradient"></div>
+            </div>
+         </div>
+      </form>
+      <br/>
+      <div class="row-fluid">
+         <div class="form-action-btns footer-btns" style="margin-left: 1700px">
+            <button class="btn cancel" id="cancelBut" value="cancel">cancel</button>&nbsp;
+            <button class="btn apply" value="apply">apply</button>&nbsp;
+         </div>
+      </div>
+      <div id="popup-contactName" title="Add/Edit Contact" class="dialog" type="hidden"> </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+         <button type="button" class="btn btn-outline-primary" data-dismiss="modal" data-target="#editContactsModal">Apply</button>
+      </div>
+   </body>
+</html>
