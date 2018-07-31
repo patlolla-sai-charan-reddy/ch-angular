@@ -8,6 +8,8 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { SharedComponent } from './shared/shared.component';
 import { HelloComponent } from './hello.component';
 import { PartiesComponent } from './parties/parties.component';
+import { MakeDirectiveDirective } from './make-directive.directive';
+import { ContactmeComponent } from './contactme/contactme.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { PartiesComponent } from './parties/parties.component';
     AgentalertComponent,
     ContactsComponent,
     SharedComponent,
-    PartiesComponent
+    PartiesComponent,
+    MakeDirectiveDirective,
+    ContactmeComponent
   ],
   imports: [
     BrowserModule,
